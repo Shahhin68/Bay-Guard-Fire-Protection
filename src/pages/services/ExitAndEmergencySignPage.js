@@ -2,6 +2,7 @@
 import { CheckIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 import { ExitLight } from "../../assets";
+import ContactUs from "../../components/ContactUs";
 
 const features = [
   {
@@ -143,6 +144,7 @@ export default function Example() {
           </dl>
         </div>
       </div>
+      <ContactUs />
     </div>
   );
 }

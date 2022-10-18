@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { CheckIcon } from "@heroicons/react/24/outline";
 import { FireExtinguisherInspection } from "../../assets";
+import ContactUs from "../../components/ContactUs";
 
 const features = [
   { name: "Yearly Inspection Service and Certification" },
@@ -115,29 +116,34 @@ export default function Example() {
           </dl>
         </div>
       </div>
-      <div className='mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8'>
-        <h2 className='text-lg font-semibold text-red-600 uppercase tracking-wide'>
-          Fire Extinguishers we Provide
-        </h2>
-        <div className='mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-1 lg:grid-cols-3 xl:gap-x-8'>
-          {products.map((product) => (
-            <div key={product.id} className='group relative'>
-              <div className='min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80'>
-                <img
-                  src={product.imageSrc}
-                  alt={product.imageAlt}
-                  className='h-full w-full object-cover object-center lg:h-full lg:w-full'
-                />
+      <div className='max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8'>
+        <div>
+          <img src={FireExtinguisherInspection} alt='Fire Exitnguishers' />
+        </div>
+        <div>
+          <h2 className='text-lg font-semibold text-red-600 uppercase tracking-wide'>
+            Fire Extinguishers we Provide
+          </h2>
+          <div className='mt-6 flex flex-col'>
+            {products.map((product) => (
+              <div key={product.id} className='group relative'>
+                <div className='mt-4 flex justify-between'>
+                  <dt>
+                    <CheckIcon
+                      className='absolute h-6 w-6 text-red-500'
+                      aria-hidden='true'
+                    />
+                    <h3 className='ml-9 text-center text-lg font-medium text-red-600 mb-8'>
+                      {product.name}
+                    </h3>
+                  </dt>
+                </div>
               </div>
-              <div className='mt-4 flex justify-between'>
-                <h3 className='text-center text-lg font-medium text-red-600 mb-8'>
-                  {product.name}
-                </h3>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
+      <ContactUs />
     </div>
   );
 }

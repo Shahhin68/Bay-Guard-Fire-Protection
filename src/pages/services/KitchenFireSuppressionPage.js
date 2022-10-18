@@ -2,6 +2,7 @@
 import { CheckIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 import { KitchenFireSuppressionSystem } from "../../assets";
+import ContactUs from "../../components/ContactUs";
 
 const examples = [
   "Restaurants",
@@ -11,24 +12,6 @@ const examples = [
   "Hospitals",
   "Nursing/care homes",
   "Food trucks/trailer",
-];
-
-const weProvide = [
-  {
-    name: "New batteries",
-    description:
-      "Interdum quam pulvinar turpis tortor, egestas quis diam amet, natoque. Mauris sagittis.",
-  },
-  {
-    name: "New Exit and Emergency Lights",
-    description:
-      "Ullamcorper in ipsum ac feugiat. Senectus at aliquam vulputate mollis nec. In at risus odio.",
-  },
-  {
-    name: "Commercial and Residential",
-    description:
-      "Magna a vel sagittis aliquam eu amet. Et lorem auctor quam nunc odio. Sed bibendum.",
-  },
 ];
 
 export default function Example() {
@@ -44,11 +27,10 @@ export default function Example() {
               Kitchen Fire Suppresion System
             </p>
             <p className='mt-3 max-w-md mx-auto text-lg text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl'>
-              Our company provides installation and inspection services for
-              industrial and commercial kitchen fire suppression systems.
-              Kitchen fires can spread quickly through multiple sources of heat.
-              A fire suppression system will help stop kitchen fires before it
-              has a chance to spread to other areas.
+              Install a Bay Guard fire suppression system in your kitchen and be
+              one step ahead in case of an emergency. Our company provides
+              installation and inspection services for industrial and commercial
+              kitchen fire suppression systems.
             </p>
             <div className='mt-10 sm:flex sm:justify-center lg:justify-start'>
               <div className='rounded-md shadow'>
@@ -72,30 +54,19 @@ export default function Example() {
       </div>
       <div className='max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-3xl mx-auto text-center mt-12'>
-          <h2 className='text-3xl font-extrabold text-gray-900'>We provide</h2>
-          <p className='mt-4 text-lg text-gray-500'>
-            Ac euismod vel sit maecenas id pellentesque eu sed consectetur.
-            Malesuada adipiscing sagittis vel nulla nec.
+          <p className='mb-8 text-lg text-gray-600'>
+            Kitchen fires can spread quickly through multiple sources of heat. A
+            fire suppression system will help stop kitchen fires before it has a
+            chance to spread to other areas.
           </p>
+          <h2 className='text-3xl font-extrabold text-gray-900'>We provide</h2>
         </div>
-        <dl className='mt-12 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-1 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-3 lg:gap-x-8'>
-          {weProvide.map((feature) => (
-            <div key={feature.name} className='relative'>
-              <dt>
-                <CheckIcon
-                  className='absolute h-6 w-6 text-green-500'
-                  aria-hidden='true'
-                />
-                <p className='ml-9 text-lg leading-6 font-medium text-gray-900'>
-                  {feature.name}
-                </p>
-              </dt>
-              <dd className='mt-2 ml-9 text-base text-gray-500'>
-                {feature.description}
-              </dd>
-            </div>
-          ))}
-        </dl>
+        <p className='text-center mt-8 mx-auto w-full md:w-3/4 text-xl font-semibold text-gray-600'>
+          We perform services and grant certifications for a wide range of fire
+          suppression systems including, Ansul system, Pyrochem, Range guard,
+          Kiddie, Buckyee, and Amerex; all of these systems are in compliance
+          with the standards set by Underwriters Laboratories (UL-300).
+        </p>
       </div>
       <div className='max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8'>
         <div>
@@ -145,6 +116,7 @@ export default function Example() {
           </dl>
         </div>
       </div>
+      <ContactUs />
     </div>
   );
 }

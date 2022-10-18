@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { CheckIcon } from "@heroicons/react/24/outline";
 import { FireSprinklers } from "../../assets";
+import ContactUs from "../../components/ContactUs";
 
 const features = [
   { name: "Yearly fire sprinkler inspection" },
@@ -100,6 +101,7 @@ export default function FireSprinklerSystemPage() {
           </dl>
         </div>
       </div>
+      <ContactUs />
     </div>
   );
 }
