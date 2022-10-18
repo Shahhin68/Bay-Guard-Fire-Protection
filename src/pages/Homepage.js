@@ -4,6 +4,7 @@ import FAQ from "../components/FAQ";
 import CTA from "../components/CTA";
 import ContactUs from "../components/ContactUs";
 import Hero from "../components/Hero";
+import CustomMarquee from "../components/CustomMarquee";
 
 const HomePage = () => {
   return (
@@ -11,6 +12,7 @@ const HomePage = () => {
       <Hero />
       <WhyChooseUs />
       <CTA />
+      <CustomMarquee />
       <FAQ />
       <ContactUs />
     </div>
