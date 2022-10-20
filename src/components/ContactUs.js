@@ -5,9 +5,11 @@ import {
 } from "@heroicons/react/24/outline";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { useNavigate } from "react-router-dom";
 
 export default function ContactUs() {
   const form = useRef();
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(form.current);
@@ -20,7 +22,8 @@ export default function ContactUs() {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          // console.log(result.text);
+          navigate("/thank-you");
         },
         (error) => {
           console.log(error.text);

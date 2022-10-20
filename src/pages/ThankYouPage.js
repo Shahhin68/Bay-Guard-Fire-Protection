@@ -18,10 +18,15 @@ const ThankYouPage = () => {
               <p className='text-sm font-semibold text-red-600 uppercase tracking-wide'>
                 Bay Guard Fire Protection Services
               </p>
-              <h1 className='mt-2 text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl'>
-                Thank You
+              <h1 className='mt-2 w-2/3 text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl'>
+                Thank You for Submitting
               </h1>
-              <p className='mt-2 text-base text-gray-500'>for reaching out</p>
+              <p className='mt-2 text-base text-gray-500'>
+                Your messages has been sent.
+              </p>
+              <p className='mt-2 text-base text-gray-500'>
+                We will be in touch and contact you soon!
+              </p>
               <div className='mt-6'>
                 <Link
                   to='/'
