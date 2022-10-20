@@ -8,7 +8,7 @@ function shuffle(array) {
     randomIndex;
 
   // While there remain elements to shuffle.
-  while (currentIndex != 0) {
+  while (currentIndex !== 0) {
     // Pick a remaining element.
     randomIndex = Math.floor(Math.random() * currentIndex);
     currentIndex--;
@@ -30,7 +30,10 @@ const CustomMarquee = () => {
     <div>
       <Marquee gradient={false} speed={35} pauseOnClick pauseOnHover>
         {shuffle(sampleImages).map((el) => (
-          <div className='rounded-lg md:rounded-xl overflow-hidden m-2 md:m-5'>
+          <div
+            key={uuid()}
+            className='rounded-lg md:rounded-xl overflow-hidden m-2 md:m-5'
+          >
             <img
               alt={el}
               key={uuid()}
@@ -48,7 +51,10 @@ const CustomMarquee = () => {
         direction='right'
       >
         {shuffle(sampleImages).map((el) => (
-          <div className='rounded-lg md:rounded-xl overflow-hidden m-2 md:m-5'>
+          <div
+            key={uuid()}
+            className='rounded-lg md:rounded-xl overflow-hidden m-2 md:m-5'
+          >
             <img
               alt={el}
               key={uuid()}
