@@ -14,6 +14,7 @@ import {
   KitchenFireSuppressionPage,
 } from "./pages/services";
 import ServicesPage from "./pages/ServicesPage";
+import ThankYouPage from "./pages/ThankYouPage";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
         <Route path='about-us' element={<AboutUsPage />} />
         <Route path='locations' element={<LocationsPage />} />
         <Route path='contact-us' element={<ContactUsPage />} />
+        <Route path='thank-you' element={<ThankYouPage />} />
         {/* Services */}
         <Route path='services'>
           <Route index element={<ServicesPage />} />
