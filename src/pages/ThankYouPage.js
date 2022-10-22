@@ -31,7 +31,7 @@ const ThankYouPage = () => {
                 <p className='text-sm font-semibold text-red-600 uppercase tracking-wide'>
                   Bay Guard Fire Protection Services
                 </p>
-                <h1 className='mt-2 w-2/3 text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl'>
+                <h1 className='mt-2 w-2/3 text-4xl font-extrabold text-gray-900 tracking-tight'>
                   Thank You for Submitting
                 </h1>
                 <p className='mt-2 text-base text-gray-500'>
@@ -57,7 +57,7 @@ const ThankYouPage = () => {
           <img
             className='absolute inset-0 h-full w-full object-cover'
             src={FireExtinguishers}
-            alt=''
+            alt='Fire Extinguishers'
           />
         </div>
       </div>
