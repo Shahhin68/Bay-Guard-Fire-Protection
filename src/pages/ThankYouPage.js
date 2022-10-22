@@ -1,12 +1,11 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FireExtinguishers } from "../assets";
+import ReactGA from "react-ga";
 
 const ThankYouPage = () => {
   useEffect(() => {
-    window.gtag("event", "conversion", {
-      send_to: "AW-10808147810/eEW7CKnPiecDEOL-3KEo",
-    });
+    ReactGA.event({ category: "event_name", action: "conversion" });
   }, []);
 
   return (
