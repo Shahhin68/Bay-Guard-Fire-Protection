@@ -16,9 +16,9 @@ import {
 import ServicesPage from "./pages/ServicesPage";
 import ThankYouPage from "./pages/ThankYouPage";
 
-import ReactGA from "react-ga";
-const MEASUREMENT_ID = "G-WHFX41JQP0"; // OUR_MEASUREMENT_ID
-ReactGA.initialize(MEASUREMENT_ID);
+// import ReactGA from "react-ga";
+// const MEASUREMENT_ID = "G-WHFX41JQP0"; // OUR_MEASUREMENT_ID
+// ReactGA.initialize(MEASUREMENT_ID);
 
 const App = () => {
   return (
@@ -52,6 +52,7 @@ const App = () => {
         {/* Error 404 */}
         <Route path='*' element={<NoMatchPage />} />
       </Route>
+      
     </Routes>
   );
 };
