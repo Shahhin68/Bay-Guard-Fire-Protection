@@ -5,7 +5,7 @@ import ReactGA from "react-ga";
 
 const ThankYouPage = () => {
   useEffect(() => {
-    ReactGA.event({ category: "event_name", action: "conversion" });
+    ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
 
   return (
