@@ -9,11 +9,11 @@ const ThankYouPage = () => {
   //   ReactGA.pageview(window.location.pathname + window.location.search);
   // }, []);
 
-  useEffect(() => {
-    window.gtag("event", "conversion", {
-      send_to: "AW-10808147810/eEW7CKnPiecDEOL-3KEo",
-    });
-  });
+  // useEffect(() => {
+  //   window.gtag("event", "conversion", {
+  //     send_to: "AW-10808147810/eEW7CKnPiecDEOL-3KEo",
+  //   });
+  // });
 
   return (
     <>

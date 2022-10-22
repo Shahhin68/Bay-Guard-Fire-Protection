@@ -24,6 +24,9 @@ export default function ContactUs() {
         (result) => {
           // console.log(result.text);
           navigate("/thank-you");
+          window.gtag("event", "conversion", {
+            send_to: "AW-10808147810/eEW7CKnPiecDEOL-3KEo",
+          });
         },
         (error) => {
           console.log(error.text);
