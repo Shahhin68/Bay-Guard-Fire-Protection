@@ -3,20 +3,20 @@ import logo from "../assets/logo.png";
 const navigation = {
   Services: [
     {
-      name: "Emergency and Exit Light",
-      href: "/services/exit-and-emergency-sign",
-    },
-    {
-      name: "Fire Sprinkler",
+      name: "Fire Sprinkler Services",
       href: "/services/fire-sprinkler-system",
     },
     {
-      name: "Fire Extinguisher ",
+      name: "Fire Extinguisher Services",
       href: "/services/fire-extinguishers",
     },
     {
-      name: "Kitchen Fire Suppression ",
+      name: "Kitchen Fire Suppression Services",
       href: "/services/kitchen-fire-suppression",
+    },
+    {
+      name: "Emergency and Exit Light Services",
+      href: "/services/exit-and-emergency-sign",
     },
   ],
   company: [
@@ -35,25 +35,37 @@ export default function Example() {
         <div className='xl:grid xl:grid-cols-5 gap-4 xl:gap-8'>
           <div className='xl:col-span-3'>
             <div className='flex flex-col justify-between items-center sm:items-start'>
-              <img className='h-8 w-auto sm:h-14' src={logo} alt='' />
+              <img className='h-8 w-auto sm:h-24' src={logo} alt='' />
               <p className='text-gray-700 text-2xl text-center sm:text-left'>
                 Bay Guard Fire Protection Services
               </p>
-              <p className='text-gray-500 text-base text-center sm:text-left mb-6'>
-                Providing fire protection services in order to help you.
+              <p className='text-red-500 text-base text-center sm:text-left mb-6'>
+                Providing fire protection services in entire Bay Area California
               </p>
+              <li className='text-gray-600'>
+                C_16 CSLB License Number: 1085623 Fire Sprinkler
+              </li>
               <li className='text-gray-600'>
                 Automatic Extinguishing Systems License Number: A019043
               </li>
               <li className='text-gray-600'>
                 Portable Fire Extinguisher License Number: #3756
               </li>
+
+              <a
+                href='https://www.yelp.com/biz/bay-guard-fire-protection-san-francisco'
+                target={"_blank"}
+                rel='noreferrer noopenner'
+                className='mt-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-red-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-red-700'
+              >
+                Check us out on Yelp!
+              </a>
             </div>
           </div>
           <div className='xl:col-span-1'>
-            <h3 className='text-sm font-semibold text-gray-400 tracking-wider uppercase'>
+            {/* <h3 className='text-sm font-semibold text-gray-400 tracking-wider uppercase'>
               Services
-            </h3>
+            </h3> */}
             <ul role='list' className='mt-4 space-y-4'>
               {navigation.Services.filter((el, index) => index < 2).map(
                 (item) => (
@@ -70,9 +82,9 @@ export default function Example() {
             </ul>
           </div>
           <div className='xl:col-span-1'>
-            <h3 className='text-sm font-semibold text-gray-400 tracking-wider uppercase'>
+            {/* <h3 className='text-sm font-semibold text-gray-400 tracking-wider uppercase'>
               Services
-            </h3>
+            </h3> */}
             <ul role='list' className='mt-4 space-y-4'>
               {navigation.Services.filter((el, index) => index > 1).map(
                 (item) => (

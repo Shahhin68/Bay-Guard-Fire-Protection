@@ -115,12 +115,12 @@ export default function Example() {
           </p>
           <p className='mt-4 text-base text-gray-600'>
             NFPA 101, the life safety and code, requires all exit and emergency
-            lights to be serviced annually. Every sign must be
-            conditionallyuminated while the building is occupied, and the word,
-            "exit must be displayed no smaller than 6 inches high and 0.75
-            inches wide. Yearly inspection, NFPA 101 requires an e test of the
-            emergency lights, by ensuring they can remain illuminated for a
-            minimum of 90 minutes .
+            lights to be serviced annually. Every sign must be continuously
+            illuminated while the building is occupied, and the word, Exit must
+            be displayed no smaller than 6 inches high and 0.75 inches wide.
+            Yearly inspection, NFPA 101 requires an e test of the emergency
+            lights, by ensuring they can remain illuminated for a minimum of 90
+            minutes .
           </p>
         </div>
         <div className='mt-12 lg:mt-0'>

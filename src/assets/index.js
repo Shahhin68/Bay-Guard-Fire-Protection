@@ -8,6 +8,8 @@ import FireExtinguisher from "./fire-extinguisher.webp";
 import KitchenFireSuppression from "./kitchen-fire-suppression.webp";
 import KitchenFireSuppressionSystem from "./kitchen-fire-suppression-system.webp";
 
+import Logo from "./hero-logo.png";
+
 // Carousel Images
 import Pic01 from "./carousel/alarm-valve.webp";
 import Pic02 from "./carousel/ansul.webp";
@@ -34,4 +36,5 @@ export {
   Pic05,
   Pic06,
   Pic07,
+  Logo,
 };

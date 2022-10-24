@@ -143,7 +143,7 @@ export default function ContactUs() {
             <h3 className='text-lg font-medium text-white'>
               Contact information
             </h3>
-            <p className='mt-6 text-base text-red-50 max-w-3xl'>
+            <p className='mt-6 text-lg text-red-50 max-w-3xl'>
               Contact Us Today to Receive a Free Quote!
             </p>
             <dl className='mt-8 space-y-6'>

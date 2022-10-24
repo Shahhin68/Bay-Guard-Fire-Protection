@@ -80,13 +80,6 @@ export default function Example() {
             suppression systems.
           </p>
           <p className='mt-4 text-base text-gray-600'>
-            We perform services and grant certifications for a wide range of
-            fire suppression systems including, Ansul system, Pyrochem, Range
-            guard, Kiddie, Buckyee, and Amerex; all of these systems are in
-            compliance with the standards set by Underwriters Laboratories
-            (UL-300).
-          </p>
-          <p className='mt-4 text-base text-gray-600'>
             Ansul R-102 fire suppression system is the most common automatic
             pre-engineered kitchen fire suppression system under UL-300
             standards. It is designed to protect the following areas associated
@@ -97,7 +90,7 @@ export default function Example() {
         </div>
         <div className='mt-12 lg:mt-0'>
           <h2 className='text-lg font-semibold text-red-600 uppercase tracking-wide mb-8'>
-            Examples of commercial kitchens include
+            Examples of commercial kitchens
           </h2>
           <dl className='space-y-6 sm:space-y-0 sm:grid sm:grid-cols-2 sm:grid-rows-3 sm:grid-flow-col sm:gap-x-6 sm:gap-y-2 lg:gap-x-8'>
             {examples.map((example) => (

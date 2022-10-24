@@ -4,8 +4,8 @@ import { FireSprinklers } from "../../assets";
 import ContactUs from "../../components/ContactUs";
 
 const features = [
+  { name: "Commercial and resedential fire sprinkler inspection" },
   { name: "Yearly fire sprinkler inspection" },
-
   {
     name: "Five years fire sprinkler test",
   },
@@ -61,23 +61,30 @@ export default function FireSprinklerSystemPage() {
             Whether it is your home or business, existing or new project we have
             the expertise to fulfill your fire protection needs. Fire sprinklers
             are very effective which react so quickly to reduce heat, flames,
-            and smoke, allowing people to ski by providing an appropriate amount
-            of water before fire grow and spread throughout the room. There are
-            several types of sprinkler systems such as: wet pipe, dry pipe,
-            deluge, and preaction fire sprinkler systems. It is very important
-            to install the appropriate numbers and type of fire sprinkler to
-            cover your area.
+            and smoke, allowing people to skip by providing an appropriate
+            amount of water before fire grow and spread throughout the room.
+            There are several types of sprinkler systems such as:
           </p>
+
+          <div>wet pipe</div>
+          <div>dry pipe</div>
+          <div>deluge</div>
+          <div>preaction fire sprinkler systems</div>
+          <p className='mt-4 text-base text-gray-600'>
+            It is very important to install the appropriate numbers and type of
+            fire sprinkler to cover your area.
+          </p>
+
           <p className='mt-4 text-base text-gray-600'>
             Fire sprinkler system are crucial to your building's safety. We
             offer quarterly, yearly inspection services and five years test to
             eliminate any system defects or compliance issues. Failing to
             properly inspect, test and maintain fire sprinkler systems may
-            result in citation or worse. It is always our goal to protect lives
-            and properties and quality service while creating valuable
-            friendships. The work of each fire protection contractor is geared
-            toward keeping your fire sprinkler system functioning at its full
-            potential at an affordable price.
+            result in citation or worse. Our goal is to keep you fire sprinkler
+            system functioning at it's full potential at an affordable price.
+            The work of each fire protection contractor is geared toward keeping
+            your fire sprinkler system functioning at its full potential at an
+            affordable price.
           </p>
         </div>
         <div className='mt-12 lg:mt-0'>

@@ -1,4 +1,5 @@
-import { HeroImage } from "../assets";
+import { Link } from "react-router-dom";
+import { HeroImage, Logo } from "../assets";
 export default function Hero() {
   return (
     <div className='relative bg-white overflow-hidden pb-24'>
@@ -18,10 +19,18 @@ export default function Hero() {
             <p className='mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl'>
               We provide fire protection services in order to help you. Bay
               Guard Fire Protection offers fire extinguisher services and
-              kitchen fire suppression systems. Whether you need a fire
-              extinguisher, inspection, refills, or maintenance, we are here to
-              help you.
+              kitchen fire suppression systems.
             </p>
+            <div className='mt-5 sm:flex sm:justify-center lg:justify-start'>
+              <div className='rounded-md shadow'>
+                <Link
+                  to='/contact'
+                  className='w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 md:py-4 md:text-lg md:px-10'
+                >
+                  Contact Us
+                </Link>
+              </div>
+            </div>
           </div>
           <div className='mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center'>
             <svg
@@ -66,7 +75,7 @@ export default function Hero() {
               />
             </svg>
             <div className='relative mx-auto w-full rounded-lg lg:max-w-md'>
-              <img className='w-full' src={HeroImage} alt='Hero' />
+              <img className='w-full' src={Logo} alt='Hero' />
             </div>
           </div>
         </div>

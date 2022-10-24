@@ -27,6 +27,12 @@ const products = [
   },
   {
     id: 2,
+    name: "Wet class K fire extinguishers",
+    imageSrc:
+      "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
+  },
+  {
+    id: 2,
     name: "Water fire extinguishers",
     imageSrc:
       "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
@@ -90,7 +96,7 @@ export default function Example() {
           <p className='mt-4 text-base text-gray-600'>
             Need to Get Compliant? Our team provides high grade fire
             extinguisher inspections, sales, refills and installations for all
-            clients throughout Bay Area, CA We come to your location and get
+            clients throughout Bay Area, CA. We come to your location and get
             your portable fire extinguishers serviced and inspected to help
             ensure you are up to fire code.
           </p>

@@ -1,42 +1,35 @@
 const faqs = [
   {
     id: 1,
-    question: 'Why do I need a fire sprinkler system in my building?',
+    question: "Why do I need a fire sprinkler system in my building?",
     answer:
-      'Buildings with a working fire sprinkler system see an average property loss and risk of death per fire that is 50 to 66 percent lower than buildings without sprinkler systems.',
+      "Buildings with a working fire sprinkler system see an average property loss and risk of death per fire that is 50 to 66 percent lower than buildings without sprinkler systems.",
   },
   {
     id: 2,
-    question: 'How many fire extinguishers do I need in my building?',
+    question: "How many fire extinguishers do I need in my building?",
     answer:
-      'While the exact number of fire extinguishers required for each building varies based on the unique layout and hazard level.',
+      "Number of fire extinguishers required for each building varied based on there layout and hazard level. ABC fire extinguisher must be supplied to every seven to fiv feet or less.",
   },
   {
     id: 3,
-    question: 'How often do I need fire extinguisher inspection?',
+    question: "How often do I need fire extinguisher inspection?",
     answer:
-      'Normal fire extinguisher inspections are required once a month to make sure there is no obvious damage to the device and the fire extinguisher pressure is adequate.',
+      "Fire extinguishers are required to be inspected once a month and also they are required to be inspected and certified by a licensed fire extinguisher company once a year.",
   },
   {
     id: 4,
     question:
-      'What kind of fire extinguisher do I need in my commercial kitchen?',
+      "What kind of fire extinguisher do I need in my commercial kitchen?",
     answer:
-      'If you own a restaurant, you already know you need a special type of fire suppression system to keep your kitchen safe from fires.',
-  },
-  {
-    id: 5,
-    question:
-      'Do I need a fire alarm system if I have a fire sprinkler system installed?',
-    answer:
-      'Yes. Fire alarm systems detect the presence of fire before the flames start, giving you extra time to escape the building. They can also automatically alert the fire department.',
+      "If you own a restaurant, you already know you need a special type of fire suppression system to keep your kitchen safe from fires and also a Wet class K portable fire extinguishers is required for commercial kitchen.",
   },
   {
     id: 6,
     question:
-      'What is the best type of fire extinguisher for sensitive electrical equipment?',
+      "What is the best type of fire extinguisher for sensitive electrical equipment?",
     answer:
-      'If you have sensitive electronic equipment, such as in a computer room or data center, using a water or a dry chemical fire extinguisher can cause as much damage as a fire itself. Instead, use a Clean Agent Fire Extinguisher.',
+      "If you have sensitive electronic equipment, such as in a computer room or data center, using a water or a dry chemical fire extinguisher can cause as much damage as a fire itself. Instead, use a Clean Agent Fire Extinguisher.",
   },
 ];
 
