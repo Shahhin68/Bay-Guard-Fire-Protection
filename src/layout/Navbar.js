@@ -50,7 +50,7 @@ export default function Example() {
             <Link to='/'>
               <span className='sr-only'>Bay Guard Fire Protection</span>
               <img
-                className='h-8 w-auto sm:h-10'
+                className='h-8 w-auto sm:h-16'
                 src={logo}
                 alt='Bay Guard Fire Protection'
               />

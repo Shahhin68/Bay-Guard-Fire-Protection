@@ -9,7 +9,7 @@ const faqs = [
     id: 2,
     question: "How many fire extinguishers do I need in my building?",
     answer:
-      "Number of fire extinguishers required for each building varied based on there layout and hazard level. ABC fire extinguisher must be supplied to every seven to fiv feet or less.",
+      "Number of fire extinguishers required for each building varied based on there layout and hazard level. ABC fire extinguisher must be supplied to every seventy five feet or less.",
   },
   {
     id: 3,

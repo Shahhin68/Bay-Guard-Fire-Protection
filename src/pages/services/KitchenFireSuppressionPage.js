@@ -14,6 +14,15 @@ const examples = [
   "Food trucks/trailer",
 ];
 
+const types = [
+  "Ansul system",
+  "Pyrochem",
+  "Range guard",
+  "Kiddie",
+  "Buckyee",
+  "Amerex",
+];
+
 export default function Example() {
   return (
     <div className='bg-white'>
@@ -27,10 +36,8 @@ export default function Example() {
               Kitchen Fire Suppresion System
             </p>
             <p className='mt-3 max-w-md mx-auto text-lg text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl'>
-              Install a Bay Guard fire suppression system in your kitchen and be
-              one step ahead in case of an emergency. Our company provides
-              installation and inspection services for industrial and commercial
-              kitchen fire suppression systems.
+              Our company provides installation and inspection services for
+              industrial and commercial kitchen fire suppression systems.
             </p>
             <div className='mt-10 sm:flex sm:justify-center lg:justify-start'>
               <div className='rounded-md shadow'>
@@ -59,14 +66,39 @@ export default function Example() {
             fire suppression system will help stop kitchen fires before it has a
             chance to spread to other areas.
           </p>
-          <h2 className='text-3xl font-extrabold text-gray-900'>We provide</h2>
         </div>
-        <p className='text-center mt-8 mx-auto w-full md:w-3/4 text-xl font-semibold text-gray-600'>
-          We perform services and grant certifications for a wide range of fire
-          suppression systems including, Ansul system, Pyrochem, Range guard,
-          Kiddie, Buckyee, and Amerex; all of these systems are in compliance
-          with the standards set by Underwriters Laboratories (UL-300).
-        </p>
+        <div className='max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8'>
+          <div>
+            <h2 className='text-lg font-semibold text-red-600 uppercase tracking-wide'>
+              We Provide
+            </h2>
+            <p className='mt-4 text-base text-gray-600'>
+              We perform services and grant certifications for a wide range of
+              fire suppression systems all of these systems are in compliance
+              with the standards set by Underwriters Laboratories (UL-300).
+            </p>
+          </div>
+          <div className='mt-12 lg:mt-0'>
+            <h2 className='text-lg font-semibold text-red-600 uppercase tracking-wide mb-8'>
+              Fire Suppression Systems
+            </h2>
+            <dl className='space-y-6 sm:space-y-0 sm:grid sm:grid-cols-2 sm:grid-rows-3 sm:grid-flow-col sm:gap-x-6 sm:gap-y-2 lg:gap-x-8'>
+              {types.map((type) => (
+                <div key={type} className='relative'>
+                  <dt>
+                    <CheckIcon
+                      className='absolute h-6 w-6 text-red-500'
+                      aria-hidden='true'
+                    />
+                    <p className='ml-9 text-lg leading-6 font-medium text-gray-900'>
+                      {type}
+                    </p>
+                  </dt>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </div>
       </div>
       <div className='max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8'>
         <div>

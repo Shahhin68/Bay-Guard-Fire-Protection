@@ -17,9 +17,10 @@ export default function Hero() {
               </span>
             </h1>
             <p className='mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl'>
-              We provide fire protection services in order to help you. Bay
-              Guard Fire Protection offers fire extinguisher services and
-              kitchen fire suppression systems.
+              We provide fire protection services in order to help you with your
+              Fire Protection needs. Bay Guard Fire Protection offers Fire
+              Extinguisher, Fire Sprinklers, Emergency Exit Lights and Kitchen
+              Fire Suppression systems.
             </p>
             <div className='mt-5 sm:flex sm:justify-center lg:justify-start'>
               <div className='rounded-md shadow'>
