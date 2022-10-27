@@ -15,6 +15,13 @@ const features = [
   { name: "Tenant improvements" },
 ];
 
+const types = [
+  "Wet Pipe",
+  "Dry Pipe",
+  "Deluge",
+  "Preaction Fire Sprinkler Systems",
+];
+
 export default function FireSprinklerSystemPage() {
   return (
     <div className='relative bg-white'>
@@ -57,7 +64,7 @@ export default function FireSprinklerSystemPage() {
           <h2 className='text-lg font-semibold text-red-600 uppercase tracking-wide'>
             Everything you need
           </h2>
-          <p className='mt-4 text-base text-gray-600'>
+          <p className='my-4 text-base text-gray-600'>
             Whether it is your home or business, existing or new project we have
             the expertise to fulfill your fire protection needs. Fire sprinklers
             are very effective which react so quickly to reduce heat, flames,
@@ -65,11 +72,19 @@ export default function FireSprinklerSystemPage() {
             amount of water before fire grow and spread throughout the room.
             There are several types of sprinkler systems such as:
           </p>
-
-          <div>wet pipe</div>
-          <div>dry pipe</div>
-          <div>deluge</div>
-          <div>preaction fire sprinkler systems</div>
+          {types.map((type) => (
+            <div key={type} className='relative my-2'>
+              <dt>
+                <CheckIcon
+                  className='absolute h-6 w-6 text-red-500 bg-gray-300 rounded-full p-1'
+                  aria-hidden='true'
+                />
+                <p className='ml-9 text-lg leading-6 font-medium text-gray-600'>
+                  {type}
+                </p>
+              </dt>
+            </div>
+          ))}
           <p className='mt-4 text-base text-gray-600'>
             It is very important to install the appropriate numbers and type of
             fire sprinkler to cover your area.
