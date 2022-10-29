@@ -45,7 +45,7 @@ export default function Example() {
   return (
     <Popover className='relative bg-white z-50'>
       <div className='mx-auto max-w-7xl px-4 sm:px-6 z-50'>
-        <div className='flex items-center justify-between border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10'>
+        <div className='flex items-center justify-between border-b-2 border-gray-100 py-2 md:justify-start md:space-x-10'>
           <div className='flex justify-start lg:w-0 lg:flex-1'>
             <Link to='/'>
               <span className='sr-only'>Bay Guard Fire Protection</span>
@@ -69,7 +69,7 @@ export default function Example() {
             >
               Home
             </Link>
-            <Popover className='relative'>
+            {/* <Popover className='relative'>
               {({ open }) => (
                 <>
                   <Popover.Button
@@ -123,11 +123,16 @@ export default function Example() {
                         </div>
                       </div>
                     </Popover.Panel>
-                  </Transition>
+                  </Transition> 
                 </>
               )}
-            </Popover>
-
+            </Popover> */}
+            <Link
+              to='/services'
+              className='text-base font-medium text-gray-500 hover:text-gray-900'
+            >
+              Services
+            </Link>
             <Link
               to='/about-us'
               className='text-base font-medium text-gray-500 hover:text-gray-900'
