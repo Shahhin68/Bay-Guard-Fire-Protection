@@ -19,6 +19,12 @@ import Pic05 from "./carousel/orange-sprinkler.webp";
 import Pic06 from "./carousel/system.webp";
 import Pic07 from "./carousel/sprinklers.webp";
 
+import WetFireExtinguisher from "./wet.webp";
+import ABCFireExtinguisher from "./abc.webp";
+import AllFireExtinguishers from "./all.webp";
+import WaterFireExtinguisher from "./water.webp";
+import HalotronFireExtinguisher from "./halotron.webp";
+
 export {
   Location,
   HeroImage,
@@ -29,6 +35,11 @@ export {
   FireExtinguisher,
   KitchenFireSuppression,
   KitchenFireSuppressionSystem,
+  WetFireExtinguisher,
+  ABCFireExtinguisher,
+  AllFireExtinguishers,
+  WaterFireExtinguisher,
+  HalotronFireExtinguisher,
   Pic01,
   Pic02,
   Pic03,

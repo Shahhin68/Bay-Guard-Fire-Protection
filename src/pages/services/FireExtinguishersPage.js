@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
 import { CheckIcon } from "@heroicons/react/24/outline";
-import { FireExtinguisherInspection } from "../../assets";
+import {
+  ABCFireExtinguisher,
+  FireExtinguisherInspection,
+  HalotronFireExtinguisher,
+  WaterFireExtinguisher,
+  WetFireExtinguisher,
+} from "../../assets";
 import ContactUs from "../../components/ContactUs";
 
 const features = [
@@ -22,26 +28,22 @@ const products = [
   {
     id: 1,
     name: "ABC fire extinguishers",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
+    imageSrc: ABCFireExtinguisher,
   },
   {
     id: 2,
     name: "Wet class K fire extinguishers",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
+    imageSrc: WetFireExtinguisher,
   },
   {
     id: 2,
     name: "Water fire extinguishers",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
+    imageSrc: WaterFireExtinguisher,
   },
   {
     id: 3,
     name: "Halotron fire extinguishers",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
+    imageSrc: HalotronFireExtinguisher,
   },
 ];
 
@@ -122,31 +124,27 @@ export default function Example() {
           </dl>
         </div>
       </div>
-      <div className='max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8'>
-        <div>
-          <img src={FireExtinguisherInspection} alt='Fire Exitnguishers' />
-        </div>
-        <div>
-          <h2 className='text-lg font-semibold text-red-600 uppercase tracking-wide'>
-            Fire Extinguishers we Provide
-          </h2>
-          <div className='mt-6 flex flex-col'>
-            {products.map((product) => (
-              <div key={product.id} className='group relative'>
-                <div className='mt-4 flex justify-between'>
-                  <dt>
-                    <CheckIcon
-                      className='absolute h-6 w-6 text-red-500'
-                      aria-hidden='true'
-                    />
-                    <h3 className='ml-9 text-center text-lg font-medium text-red-600 mb-8'>
-                      {product.name}
-                    </h3>
-                  </dt>
-                </div>
+      <div className='max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8'>
+        <h2 className='text-lg font-semibold text-red-600 uppercase tracking-wide'>
+          Fire Extinguishers we Provide
+        </h2>
+        <div className='mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
+          {products.map((product) => (
+            <div key={product.id} className='group relative'>
+              <div className='h-96 w-full'>
+                <img
+                  src={product.imageSrc}
+                  className='h-full w-full object-contain'
+                  alt={product.name}
+                />
               </div>
-            ))}
-          </div>
+              <div className='mt-1'>
+                <h3 className='text-center text-lg font-medium text-red-600 mb-8'>
+                  {product.name}
+                </h3>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
       <ContactUs />
