@@ -5,7 +5,7 @@ import {
   FireIcon,
   ClockIcon,
 } from "@heroicons/react/20/solid";
-import { FireExtinguishers } from "../assets";
+import { BayGuard, FireExtinguishers } from "../assets";
 import CustomMarquee from "../components/CustomMarquee";
 
 const perks = [
@@ -50,12 +50,12 @@ const AboutUsPage = () => {
             </p>
           </div>
           <div className='w-full lg:w-6/12'>
-            <img src={FireExtinguishers} alt='' />
+            <img src={FireExtinguishers} alt='Fire Extinguishers' />
           </div>
         </div>
 
         <div className='flex lg:flex-row flex-col md:gap-14 gap-16 justify-between lg:mt-20 mt-16'>
-          <div className='w-full lg:w-6/12'>
+          <div className='w-full lg:w-8/12'>
             <h2 className='font-bold lg:text-4xl text-3xl lg:leading-9 leading-7 text-gray-800'>
               Our Mission
             </h2>
@@ -74,10 +74,7 @@ const AboutUsPage = () => {
               fire extinguishers. Our highly trained team is excited to work
               with you to protect your business, property and loved ones.
             </p>
-          </div>
-          <div className='w-full lg:w-6/12'>
-            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 lg:gap-12 gap-10'>
-              {/* <!-- Team Card --> */}
+            <div className='mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 lg:gap-12 gap-10'>
               {perks.map((perk) => (
                 <div className='flex p-4 shadow-md'>
                   <div className='mr-6'>{perk.icon}</div>
@@ -92,6 +89,9 @@ const AboutUsPage = () => {
                 </div>
               ))}
             </div>
+          </div>
+          <div className='w-full lg:w-4/12'>
+            <img src={BayGuard} alt='Bay Guard' />
           </div>
         </div>
       </div>

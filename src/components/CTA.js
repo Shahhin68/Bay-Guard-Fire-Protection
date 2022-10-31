@@ -4,7 +4,7 @@ import { KitchenFireSuppression, Sprinkler } from "../assets";
 export default function CTA() {
   return (
     <div className='relative py-16 bg-white'>
-      <div className='max-w-7xl mx-auto bg-red-600 lg:bg-transparent lg:px-4'>
+      <div className='max-w-7xl mx-auto bg-red-700 lg:bg-transparent lg:px-4'>
         <div className='lg:grid lg:grid-cols-12'>
           <div className='relative z-10 lg:col-start-1 lg:row-start-1 lg:col-span-4 lg:py-16 lg:bg-transparent'>
             <div
@@ -12,7 +12,7 @@ export default function CTA() {
               aria-hidden='true'
             />
             <div className='max-w-md mx-auto px-4 sm:max-w-3xl sm:px-6 lg:max-w-none lg:p-0'>
-              <div className='aspect-w-16 aspect-h-4 sm:aspect-w-3 sm:aspect-h-2'>
+              <div className='aspect-w-6 aspect-h-4'>
                 <img
                   className='object-cover object-center rounded-md shadow-xl'
                   src={Sprinkler}

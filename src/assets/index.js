@@ -11,6 +11,7 @@ import KitchenFireSuppression from "./kitchen-fire-suppression.webp";
 import KitchenFireSuppressionSystem from "./kitchen-fire-suppression-system.webp";
 
 import Logo from "./hero-logo.png";
+import BayGuard from "./BayGuard.webp";
 
 // Carousel Images
 import Pic01 from "./carousel/alarm-valve.webp";
@@ -28,6 +29,7 @@ import WaterFireExtinguisher from "./water.webp";
 import HalotronFireExtinguisher from "./halotron.webp";
 
 export {
+  BayGuard,
   Location,
   HeroImage,
   ExitLight,
