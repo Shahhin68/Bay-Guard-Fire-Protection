@@ -1,12 +1,12 @@
-import { FireExtinguisher } from "../assets";
+import { Pipe } from "../assets";
 
 const WhyChooseUs = () => (
   <div className='xl:mx-auto xl:container  md:px-6 px-4 py-24'>
     <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
       <div className='w-full'>
         <img
-          src={FireExtinguisher}
-          alt='ongoing meeting'
+          src={Pipe}
+          alt='Pipe'
           className='w-full obejct-fit object-center object-fill h-full'
         />
       </div>

@@ -1,6 +1,8 @@
+import Pipe from "./pipe.webp";
 import HeroImage from "./hero.webp";
 import Location from "./location.webp";
 import ExitLight from "./exit-light.webp";
+import Sprinkler from "./sprinkler.webp";
 import FireSprinklers from "./fire-sprinklers.webp";
 import FireExtinguishers from "./fire-extinguishers.webp";
 import FireExtinguisherInspection from "./fire-ex-inspection.webp";
@@ -30,6 +32,8 @@ export {
   HeroImage,
   ExitLight,
   FireSprinklers,
+  Sprinkler,
+  Pipe,
   FireExtinguishers,
   FireExtinguisherInspection,
   FireExtinguisher,

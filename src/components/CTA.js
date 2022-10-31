@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { KitchenFireSuppression } from "../assets";
+import { KitchenFireSuppression, Sprinkler } from "../assets";
 
 export default function CTA() {
   return (
@@ -15,8 +15,8 @@ export default function CTA() {
               <div className='aspect-w-16 aspect-h-4 sm:aspect-w-3 sm:aspect-h-2'>
                 <img
                   className='object-cover object-center rounded-md shadow-xl'
-                  src={KitchenFireSuppression}
-                  alt=''
+                  src={Sprinkler}
+                  alt='Sprinkler'
                 />
               </div>
             </div>
