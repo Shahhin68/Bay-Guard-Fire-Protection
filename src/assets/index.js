@@ -10,7 +10,6 @@ import FireExtinguisher from "./fire-extinguisher.webp";
 import KitchenFireSuppression from "./kitchen-fire-suppression.webp";
 import KitchenFireSuppressionSystem from "./kitchen-fire-suppression-system.webp";
 
-import Logo from "./hero-logo.png";
 import BayGuard from "./BayGuard.webp";
 
 // Carousel Images
@@ -53,5 +52,4 @@ export {
   Pic05,
   Pic06,
   Pic07,
-  Logo,
 };
