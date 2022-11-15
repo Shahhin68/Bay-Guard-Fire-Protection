@@ -29,7 +29,7 @@ const App = () => {
           <Route index element={<HomePage />} />
           <Route path='about-us' element={<AboutUsPage />} />
           <Route path='locations' element={<LocationsPage />} />
-          <Route path='contact-us' element={<ContactUsPage />} />
+          <Route path='contact' element={<ContactUsPage />} />
           <Route path='thank-you' element={<ThankYouPage />} />
           {/* Services */}
           <Route path='services'>
@@ -51,7 +51,6 @@ const App = () => {
               element={<KitchenFireSuppressionPage />}
             />
           </Route>
-          {/* Error 404 */}
           <Route path='*' element={<NoMatchPage />} />
         </Route>
       </Routes>

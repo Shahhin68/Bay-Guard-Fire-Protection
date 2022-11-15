@@ -148,10 +148,10 @@ export default function Example() {
           </Popover.Group>
           <div className='hidden items-center justify-end md:flex md:flex-1 lg:w-0'>
             <Link
-              to='/contact-us'
+              to='/contact'
               className='ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-red-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-red-700'
             >
-              Contact US
+              Contact us
             </Link>
           </div>
         </div>
@@ -229,10 +229,10 @@ export default function Example() {
                   Locations
                 </Link>
                 <Link
-                  to='/contact-us'
+                  to='/contact'
                   className='text-base font-medium text-gray-900 hover:text-gray-700'
                 >
-                  Contact US
+                  Contact us
                 </Link>
               </div>
             </div>

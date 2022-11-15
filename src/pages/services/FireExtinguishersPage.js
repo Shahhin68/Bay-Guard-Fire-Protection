@@ -50,9 +50,9 @@ const products = [
 export default function Example() {
   return (
     <div className='relative bg-white'>
-      <div className='lg:relative'>
-        <div className='mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left'>
-          <div className='px-4 lg:w-1/2 sm:px-8 xl:pr-16'>
+      <div className='mt-16 mx-auto max-w-7xl px-4 sm:mt-24 sm:px-6 lg:mt-32'>
+        <div className='lg:grid lg:grid-cols-12 lg:gap-8'>
+          <div className='sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left'>
             <p className='block text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl lg:text-5xl'>
               Bay Guard Fire Protection
             </p>
@@ -64,26 +64,29 @@ export default function Example() {
               extinguisher services such as inspections, refills, and
               maintenance.
             </p>
-            <div className='mt-10 sm:flex sm:justify-center lg:justify-start'>
+            <div className='mt-5 sm:flex sm:justify-center lg:justify-start'>
               <div className='rounded-md shadow'>
                 <Link
                   to='/contact'
-                  className='w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 md:py-4 md:text-lg md:px-10'
+                  className='w-full flex items-center justify-center px-6 py-2 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 md:py-3 md:text-lg md:px-8'
                 >
                   Contact Us
                 </Link>
               </div>
             </div>
           </div>
-        </div>
-        <div className='relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full'>
-          <img
-            className='absolute inset-0 w-full h-full object-cover'
-            src={FireExtinguisherInspection}
-            alt='Fire Extinguisher Inspection'
-          />
+          <div className='mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center'>
+            <div className='relative mx-auto w-full rounded-lg'>
+              <img
+                className='w-full'
+                src={FireExtinguisherInspection}
+                alt='Fire Extinguisher Inspection'
+              />
+            </div>
+          </div>
         </div>
       </div>
+
       <div className='max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8 lg:grid lg:grid-cols-3 lg:gap-x-8'>
         <div>
           <h2 className='text-lg font-semibold text-red-600 uppercase tracking-wide'>
