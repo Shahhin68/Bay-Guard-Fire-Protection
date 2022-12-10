@@ -12,13 +12,13 @@ export default function ContactUs() {
   const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(form.current);
+    // console.log(form.current);
     emailjs
       .sendForm(
-        "prathmeshsadake",
-        "devfolio",
+        "service_bayguard",
+        "bayguardfireprotection",
         form.current,
-        "FaHFkZCgDSqGoaUTN"
+        "a6bfEA_PfsKHzEnj2"
       )
       .then(
         (result) => {
@@ -29,7 +29,7 @@ export default function ContactUs() {
           });
         },
         (error) => {
-          console.log(error.text);
+          // console.log(error.text);
         }
       );
   };
@@ -165,7 +165,7 @@ export default function ContactUs() {
                   className='flex-shrink-0 w-6 h-6 text-red-200'
                   aria-hidden='true'
                 />
-                <span className='ml-3'>sh_bgfp@yahoo.com</span>
+                <span className='ml-3'>info@bayguardfireprotection.com</span>
               </dd>
               <dd className='flex text-base text-red-50'>
                 <ClockIcon
