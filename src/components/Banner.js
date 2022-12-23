@@ -38,7 +38,9 @@ export default function Banner() {
               aria-hidden='true'
             />
             <span className='ml-3 text-white font-semibold'>
+              <a href="tel:+14083188636">
               +1 (408) 318-8636
+              </a>
             </span>
           </div>
         </div>

@@ -155,7 +155,9 @@ export default function ContactUs() {
                   className='flex-shrink-0 w-6 h-6 text-red-200'
                   aria-hidden='true'
                 />
-                <span className='ml-3'>+1 (408) 318-8636</span>
+                <span className='ml-3'>
+                  <a href='tel:+14083188636'>+1 (408) 318-8636</a>
+                </span>
               </dd>
               <dt>
                 <span className='sr-only'>Email</span>
@@ -165,7 +167,11 @@ export default function ContactUs() {
                   className='flex-shrink-0 w-6 h-6 text-red-200'
                   aria-hidden='true'
                 />
-                <span className='ml-3'>info@bayguardfireprotection.com</span>
+                <span className='ml-3'>
+                  <a className='' href='mailto:info@bayguardfireprotection.com'>
+                    info@bayguardfireprotection.com
+                  </a>
+                </span>
               </dd>
               <dd className='flex text-base text-red-50'>
                 <ClockIcon
