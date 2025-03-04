@@ -3,16 +3,56 @@ import {
   EnvelopeIcon,
   ClockIcon,
 } from "@heroicons/react/24/outline";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { useNavigate } from "react-router-dom";
 
 export default function ContactUs() {
   const form = useRef();
   const navigate = useNavigate();
+  const [formErrors, setFormErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const validateForm = () => {
+    const currentForm = form.current;
+    const errors = {};
+
+    // Required fields validation
+    if (!currentForm["first-name"].value.trim()) {
+      errors["first-name"] = "First name is required";
+    }
+
+    if (!currentForm["last-name"].value.trim()) {
+      errors["last-name"] = "Last name is required";
+    }
+
+    if (!currentForm.email.value.trim()) {
+      errors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(currentForm.email.value)) {
+      errors.email = "Email is invalid";
+    }
+
+    if (!currentForm.subject.value.trim()) {
+      errors.subject = "Subject is required";
+    }
+
+    if (!currentForm.message.value.trim()) {
+      errors.message = "Message is required";
+    }
+
+    setFormErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // console.log(form.current);
+
+    if (!validateForm()) {
+      return;
+    }
+
+    setIsSubmitting(true);
+
     emailjs
       .sendForm(
         "service_bayguard",
@@ -22,17 +62,18 @@ export default function ContactUs() {
       )
       .then(
         (result) => {
-          // console.log(result.text);
           navigate("/thank-you");
           window.gtag("event", "conversion", {
             send_to: "AW-10808147810/eEW7CKnPiecDEOL-3KEo",
           });
         },
         (error) => {
-          // console.log(error.text);
+          setIsSubmitting(false);
         }
-      );
+      )
+      .finally(() => setIsSubmitting(false));
   };
+
   return (
     <div className='max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6'>
       <div className='relative bg-white shadow-xl'>
@@ -198,7 +239,7 @@ export default function ContactUs() {
                   htmlFor='first-name'
                   className='block text-sm font-medium text-gray-900'
                 >
-                  First name
+                  First name <span className='text-red-600'>*</span>
                 </label>
                 <div className='mt-1'>
                   <input
@@ -206,8 +247,16 @@ export default function ContactUs() {
                     name='first-name'
                     id='first-name'
                     autoComplete='given-name'
-                    className='py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-red-500 focus:border-red-500 border-gray-300 rounded-md'
+                    className={`py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-red-500 focus:border-red-500 border-gray-300 rounded-md ${
+                      formErrors["first-name"] ? "border-red-500" : ""
+                    }`}
+                    required
                   />
+                  {formErrors["first-name"] && (
+                    <p className='mt-1 text-sm text-red-600'>
+                      {formErrors["first-name"]}
+                    </p>
+                  )}
                 </div>
               </div>
               <div>
@@ -215,7 +264,7 @@ export default function ContactUs() {
                   htmlFor='last-name'
                   className='block text-sm font-medium text-gray-900'
                 >
-                  Last name
+                  Last name <span className='text-red-600'>*</span>
                 </label>
                 <div className='mt-1'>
                   <input
@@ -223,8 +272,16 @@ export default function ContactUs() {
                     name='last-name'
                     id='last-name'
                     autoComplete='family-name'
-                    className='py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-red-500 focus:border-red-500 border-gray-300 rounded-md'
+                    className={`py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-red-500 focus:border-red-500 border-gray-300 rounded-md ${
+                      formErrors["last-name"] ? "border-red-500" : ""
+                    }`}
+                    required
                   />
+                  {formErrors["last-name"] && (
+                    <p className='mt-1 text-sm text-red-600'>
+                      {formErrors["last-name"]}
+                    </p>
+                  )}
                 </div>
               </div>
               <div>
@@ -232,7 +289,7 @@ export default function ContactUs() {
                   htmlFor='email'
                   className='block text-sm font-medium text-gray-900'
                 >
-                  Email
+                  Email <span className='text-red-600'>*</span>
                 </label>
                 <div className='mt-1'>
                   <input
@@ -240,8 +297,16 @@ export default function ContactUs() {
                     name='email'
                     type='email'
                     autoComplete='email'
-                    className='py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-red-500 focus:border-red-500 border-gray-300 rounded-md'
+                    className={`py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-red-500 focus:border-red-500 border-gray-300 rounded-md ${
+                      formErrors.email ? "border-red-500" : ""
+                    }`}
+                    required
                   />
+                  {formErrors.email && (
+                    <p className='mt-1 text-sm text-red-600'>
+                      {formErrors.email}
+                    </p>
+                  )}
                 </div>
               </div>
               <div>
@@ -272,15 +337,23 @@ export default function ContactUs() {
                   htmlFor='subject'
                   className='block text-sm font-medium text-gray-900'
                 >
-                  Subject
+                  Subject <span className='text-red-600'>*</span>
                 </label>
                 <div className='mt-1'>
                   <input
                     type='text'
                     name='subject'
                     id='subject'
-                    className='py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-red-500 focus:border-red-500 border-gray-300 rounded-md'
+                    className={`py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-red-500 focus:border-red-500 border-gray-300 rounded-md ${
+                      formErrors.subject ? "border-red-500" : ""
+                    }`}
+                    required
                   />
+                  {formErrors.subject && (
+                    <p className='mt-1 text-sm text-red-600'>
+                      {formErrors.subject}
+                    </p>
+                  )}
                 </div>
               </div>
               <div className='sm:col-span-2'>
@@ -289,7 +362,7 @@ export default function ContactUs() {
                     htmlFor='message'
                     className='block text-sm font-medium text-gray-900'
                   >
-                    Message
+                    Message <span className='text-red-600'>*</span>
                   </label>
                   <span id='message-max' className='text-sm text-gray-500'>
                     Max. 500 characters
@@ -300,18 +373,27 @@ export default function ContactUs() {
                     id='message'
                     name='message'
                     rows={4}
-                    className='py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-red-500 focus:border-red-500 border border-gray-300 rounded-md'
+                    className={`py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-red-500 focus:border-red-500 border border-gray-300 rounded-md ${
+                      formErrors.message ? "border-red-500" : ""
+                    }`}
                     aria-describedby='message-max'
-                    defaultValue={""}
+                    maxLength={500}
+                    required
                   />
+                  {formErrors.message && (
+                    <p className='mt-1 text-sm text-red-600'>
+                      {formErrors.message}
+                    </p>
+                  )}
                 </div>
               </div>
               <div className='sm:col-span-2 sm:flex sm:justify-end'>
                 <button
                   type='submit'
-                  className='mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:w-auto'
+                  className='mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:w-auto disabled:opacity-50'
+                  disabled={isSubmitting}
                 >
-                  Submit
+                  {isSubmitting ? "Submitting..." : "Submit"}
                 </button>
               </div>
             </form>

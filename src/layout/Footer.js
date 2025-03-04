@@ -102,7 +102,8 @@ export default function Example() {
         </div>
         <div className='mt-12 border-t border-gray-200 pt-4'>
           <p className='text-base text-gray-500 sm:text-center'>
-            &copy; Copyright © 2022. All rights reserved.
+            Copyright &copy; {new Date(Date.now()).getFullYear()}. All rights
+            reserved.
           </p>
         </div>
       </div>
